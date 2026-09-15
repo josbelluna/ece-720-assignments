@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+
+\title{Paper 1 Review: What Makes a Good Bug Report?}
+\author{Josbel Luna}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+
+This paper presents an empirical study of what information is useful in bug reports.
+Using three popular open-source projects, the authors define a fixed set of features found in bug reports and survey developers and reporters about their use and importance.
+They compared what developers need with what reporters actually provide, and found that reporters often know what matters but it is hard for them to include it. Steps to reproduce were the most important feature for both sides.
+The results also reinforce features that were considered important (such as stack traces) and challenge prior assumptions that other features are unimportant (such as duplicates).
+
+Additionally, they provide a tool to predict the quality of a bug report and to help reporters write better bug reports by analyzing their content and suggesting tips that may help reports get attention and be fixed sooner.
+
+\section{Strengths}
+
+\begin{itemize}
+  \item The selection of the participants is well done, as they selected the correct participants of experienced developers rather than ones that could bias the result. It matters as the quality of the survey depends so much on the quality of participants.
+  \item The isolation of inconsistencies in the response was a good practice to avoid it polluting the result. This helped to avoid wrong results and make the survey consistent.
+  \item Threats to validity were very well written, they identified major problems that affect the paper and most of the concerns about it. It is very important to note what it is misrepresenting and what is not.
+\end{itemize}
+
+\section{Weaknesses}
+
+\begin{itemize}
+  \item Main weakness is the title itself of the report, while it is presented as a solution for bug reports, it is only surveyed to a very narrow spectrum of the software industry, and as they claimed in the threats to validity, it is very hard to see it translated to closed-source software. A title like Technical or Open source bug report will suit more to the investigation.
+  \item The correlation between good reports and their likelihood to be fixed seems misleading, as good as a report would be, the domain of the bug (the complexity of it) might be the most important factor to determine a bug will be fixed or not, I'd say the time to fix it will be affected by the quality, but the likelihood of fixing it might not.
+  \item A fixed form of selections will only consider what the writer of the paper considers as important, even if there is a free form the initial selection will bias the developer to not think in what is important for them and only to choose what is provided.
+\end{itemize}
+
+\section{Comments}
+
+\subsection{Novelty}
+
+There is a medium amount of novelty in the paper, even though the information generated was mostly known by the industry, adding this empirical study helps to validate the assumptions and it also broke some of the misconceptions that existed before, for example in Section 3.3 they found the information mismatch between reporters and developers, demonstrating that reporters often know what developers want but not always provide it.
+
+As noted in the related work section, the CUEZILLA tool is not a novel idea (Hooimeijer and Weimer did first) but it introduced the developer ratings instead, bringing a new perspective to solve the problem.
+
+\subsection{Rigor}
+
+Strong rigor of the survey design, results profiling and how to display the results, Section 2.3 shows how they correctly discarded inconsistent responses. The 41\% accuracy of the CUEZILLA tool is a good indicator of the tool was well thought out and can be refined further.
+
+\subsection{Relevance}
+
+The information provided is quite relevant in open-source projects and the tool they provided could be improved to be used in a variety of projects. The authors acknowledge in the threats to validity that the information might not be transferable for closed-source software, being less relevant for them.
+
+\subsection{Verifiability and Transparency}
+
+Due to the nature of surveys, it is hard to reproduce the information gathered but the paper presented the questions and results in a very detailed way, but even then the tool is hard to validate based only on the information on the paper.
+
+A good point in terms of transparency is the threats to validity correctly identify the issues concerning the paper and things that could not be reproduced.
+
+\subsection{Presentation}
+
+Excellent presentation of the survey design in Figure 2 and the results in Table 2 and 3 are easy to understand, also the correlation between what developers seek and what reporters provide in Figure 3 clearly shows the correlation in those terms.
+
+My suggestion mentioned in the weakness is they should present it as an open-source bug report in the title/abstract, so it will help the reader to know the relevance beforehand.
+
+\end{document}
