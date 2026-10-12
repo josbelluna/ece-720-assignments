@@ -1,0 +1,2 @@
+The quality of bug reports affects how developers pay attention and fix them. 
+The results suggest that steps to reproduce and stack traces are the most helpful information for developers, and reporters ofter knows what's important but it is hard for them to provide. Results also shared that Bug duplicates are surprisingly not harmful for developers.
